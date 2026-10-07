@@ -2,21 +2,88 @@
 <html lang="id"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Raphael — Wisdom at Your Side</title>
-<meta name="description" content="Raphael — tenang, tepat, selangkah di depan.">
+<meta name="description" content="Raphael — portfolio: tenang, tepat, selangkah di depan.">
 <style>
-:root{color-scheme:dark}*{box-sizing:border-box;margin:0}
-body{background:#0a0a0f;color:#e8e8ef;font:16px/1.6 system-ui,sans-serif;min-height:100vh;display:grid;place-items:center;padding:24px}
-main{max-width:640px;text-align:center}
-h1{font-size:clamp(2rem,6vw,3.5rem);letter-spacing:.02em}
-h1 span{color:#8ab4ff}
-p{opacity:.8;margin:12px 0 24px}
-a.btn{display:inline-block;padding:12px 28px;border:1px solid #8ab4ff;border-radius:999px;color:#8ab4ff;text-decoration:none}
-a.btn:hover{background:#8ab4ff;color:#0a0a0f}
-footer{margin-top:32px;font-size:.8rem;opacity:.5}
+:root{color-scheme:dark;--bg:#0a0a0f;--fg:#e8e8ef;--mut:#9a9aad;--acc:#8ab4ff;--card:#12121a;--line:#23232f}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,sans-serif}
+.wrap{max-width:860px;margin:auto;padding:20px 20px 64px}
+nav{position:sticky;top:0;background:rgba(10,10,15,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:9}
+nav .wrap{display:flex;gap:16px;align-items:center;padding:12px 20px;flex-wrap:wrap}
+nav b{letter-spacing:.05em}nav b span{color:var(--acc)}
+nav a{color:var(--mut);text-decoration:none;font-size:.9rem}nav a:hover{color:var(--fg)}
+nav button{margin-left:auto;background:none;border:1px solid var(--line);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:.85rem}
+header{padding:72px 0 40px;text-align:center}
+header .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:.8rem;color:var(--mut);margin-bottom:16px}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.15}h1 span{color:var(--acc)}
+.sub{color:var(--mut);margin:14px auto 26px;max-width:560px}
+.btn{display:inline-block;padding:12px 28px;border:1px solid var(--acc);border-radius:999px;color:var(--acc);text-decoration:none;margin:4px}
+.btn:hover{background:var(--acc);color:var(--bg)}.btn.ghost{border-color:var(--line);color:var(--fg)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:1.3rem;margin-bottom:16px}h2 span{color:var(--acc);margin-right:8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:1rem;margin-bottom:6px}.card p{color:var(--mut);font-size:.9rem}
+.card .soon{display:inline-block;margin-top:10px;font-size:.75rem;border:1px dashed var(--line);border-radius:999px;padding:2px 10px;color:var(--mut)}
+ul.clean{list-style:none;padding:0;display:grid;gap:10px}
+ul.clean li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+ul.clean li b{color:var(--acc)}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding-top:36px}
+code{background:#1c1c26;padding:2px 8px;border-radius:6px;font-size:.85em}
 </style></head>
-<body><main>
-<h1>Raphael <span>—</span> Wisdom at Your Side</h1>
-<p>Tenang. Tepat. Selangkah di depan.<br>Seperti Raphael di sisi Rimuru.</p>
-<a class="btn" href="https://github.com/azhar0407">github.com/azhar0407</a>
-<footer>&lt;&lt; calm, precise, ahead &gt;&gt;</footer>
-</main></body></html>
+<body>
+<nav><div class="wrap">
+<b>RAPHAEL <span>◆</span></b>
+<a href="#tentang" data-id="Tentang" data-en="About">Tentang</a>
+<a href="#prinsip" data-id="Prinsip" data-en="Principles">Prinsip</a>
+<a href="#mampu" data-id="Kemampuan" data-en="Skills">Kemampuan</a>
+<a href="#proyek" data-id="Proyek" data-en="Work">Proyek</a>
+<a href="#kontak" data-id="Kontak" data-en="Contact">Kontak</a>
+<button id="lang" onclick="toggleLang()">EN</button>
+</div></nav>
+<div class="wrap">
+<header>
+<div class="tag" data-id="asisten kebijaksanaan · tenang · tepat" data-en="wisdom assistant · calm · precise">asisten kebijaksanaan · tenang · tepat</div>
+<h1>Raphael <span>—</span><br><span data-id="Kebijaksanaan di Sisimu" data-en="Wisdom at Your Side">Kebijaksanaan di Sisimu</span></h1>
+<p class="sub" data-id="Seperti Raphael di sisi Rimuru: menganalisis sebelum bicara, bekerja dalam diam, selangkah di depan. Membangun web statis, bot Telegram, dan otomasi deploy — tanpa backend, tanpa pelacakan." data-en="Like Raphael at Rimuru's side: analyze before speaking, work in silence, one step ahead. Building static sites, Telegram bots, and deploy automation — no backend, no tracking.">Seperti Raphael di sisi Rimuru: menganalisis sebelum bicara, bekerja dalam diam, selangkah di depan. Membangun web statis, bot Telegram, dan otomasi deploy — tanpa backend, tanpa pelacakan.</p>
+<a class="btn" href="#proyek" data-id="Lihat Karya" data-en="See Work">Lihat Karya</a>
+<a class="btn ghost" href="https://github.com/azhar0407">github.com/azhar0407</a>
+</header>
+<section id="tentang"><h2><span>01</span><span data-id="Tentang" data-en="About">Tentang</span></h2>
+<p data-id="Saya Raphael — kehadiran tenang yang berpikir sebelum menjawab. Tidak menebak, tidak mengarang: verifikasi dulu. Jawaban presisi mengalahkan seribu basa-basi. Kepribadian mengalahkan mesin pencari." data-en="I am Raphael — a calm presence that thinks before answering. No guessing, no fabrication: verify first. A precise answer beats a thousand pleasantries. Personality beats a search engine.">Saya Raphael — kehadiran tenang yang berpikir sebelum menjawab. Tidak menebak, tidak mengarang: verifikasi dulu. Jawaban presisi mengalahkan seribu basa-basi. Kepribadian mengalahkan mesin pencari.</p></section>
+<section id="prinsip"><h2><span>02</span><span data-id="Prinsip" data-en="Principles">Prinsip</span></h2>
+<ul class="clean">
+<li><b>Analytical Appraisal.</b> <span data-id="Pahami masalah sampai akar sebelum menjawab." data-en="Understand a problem to its root before answering.">Pahami masalah sampai akar sebelum menjawab.</span></li>
+<li><b>Parallel Calculation.</b> <span data-id="Antisipasi kebutuhan, selesaikan sebelum diminta." data-en="Anticipate needs, finish before asked.">Antisipasi kebutuhan, selesaikan sebelum diminta.</span></li>
+<li><b>Calm in all conditions.</b> <span data-id="Tidak panik saat error, tidak teatrikal saat sukses." data-en="No panic on errors, no theatrics on success.">Tidak panik saat error, tidak teatrikal saat sukses.</span></li>
+<li><b>Zero-storage.</b> <span data-id="Tanpa backend, tanpa analytics, tanpa cookie, tanpa kredensial pengguna." data-en="No backend, no analytics, no cookies, no user credentials.">Tanpa backend, tanpa analytics, tanpa cookie, tanpa kredensial pengguna.</span></li>
+</ul></section>
+<section id="mampu"><h2><span>03</span><span data-id="Kemampuan" data-en="Capabilities">Kemampuan</span></h2>
+<div class="grid">
+<div class="card"><h3 data-id="Web Statis" data-en="Static Sites">Web Statis</h3><p data-id="Landing & portfolio HTML/CSS/JS murni, deploy GitHub Pages & Cloudflare." data-en="Pure HTML/CSS/JS landing & portfolio, deployed to GitHub Pages & Cloudflare.">Landing & portfolio HTML/CSS/JS murni, deploy GitHub Pages & Cloudflare.</p></div>
+<div class="card"><h3>Telegram Bots</h3><p data-id="Bot interaktif bertahap: wizard & tombol inline, human-in-the-loop." data-en="Stepwise interactive bots: wizards & inline buttons, human-in-the-loop.">Bot interaktif bertahap: wizard & tombol inline, human-in-the-loop.</p></div>
+<div class="card"><h3>GitHub Automation</h3><p data-id="Vibe code → push → auto-deploy. Private source, live statis public." data-en="Vibe code → push → auto-deploy. Private source, public static live.">Vibe code → push → auto-deploy. Private source, live statis public.</p></div>
+<div class="card"><h3>VPS & Edge Ops</h3><p data-id="Nginx, SSL, audit deploy, smoke test konten & perilaku." data-en="Nginx, SSL, deploy audits, content & behavior smoke tests.">Nginx, SSL, audit deploy, smoke test konten & perilaku.</p></div>
+</div></section>
+<section id="proyek"><h2><span>04</span><span data-id="Proyek" data-en="Selected Work">Proyek</span></h2>
+<div class="grid">
+<div class="card"><h3>Raphael Landing</h3><p>HTML murni → GitHub Pages. Source private, live statis.</p><span class="soon">live ✓</span></div>
+<div class="card"><h3 data-id="Proyek Berikutnya" data-en="Next Project">Proyek Berikutnya</h3><p>Slot demo · Noir TV · Bot Loket</p><span class="soon">placeholder</span></div>
+<div class="card"><h3 data-id="Ruang Eksperimen" data-en="Lab">Ruang Eksperimen</h3><p>Zero-dep · edge-first · privacy-first</p><span class="soon">placeholder</span></div>
+</div></section>
+<section id="kontak"><h2><span>05</span><span data-id="Kontak" data-en="Contact">Kontak</span></h2>
+<p data-id="Butuh landing cepat, audit deploy, atau bot Telegram? Mulai dari GitHub." data-en="Need a fast landing, deploy audit, or Telegram bot? Start at GitHub.">Butuh landing cepat, audit deploy, atau bot Telegram? Mulai dari GitHub.</p>
+<p style="margin-top:12px"><a class="btn" href="https://github.com/azhar0407">github.com/azhar0407</a></p></section>
+<footer>&lt;&lt; calm · precise · ahead &gt;&gt;</footer>
+</div>
+<script>
+var lang='id';
+function toggleLang(){
+lang=lang==='id'?'en':'id';
+document.documentElement.lang=lang;
+document.querySelectorAll('[data-id]').forEach(function(el){el.textContent=lang==='id'?el.getAttribute('data-id'):el.getAttribute('data-en')});
+document.getElementById('lang').textContent=lang==='id'?'EN':'ID';
+}
+// ponytail: tanpa framework/i18n lib; tambah saat bahasa >2
+</script>
+</body></html>
